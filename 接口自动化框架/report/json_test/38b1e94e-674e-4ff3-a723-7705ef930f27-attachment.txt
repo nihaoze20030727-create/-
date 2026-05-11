@@ -1,0 +1,7 @@
+INFO     root:test_runner2.py:35 用例ID：1 模块：登录模块 场景：登录成功 标题：管理员登陆成功
+INFO     root:analyse_case.py:27 请求解析数据，请求数据为：{'method': 'post', 'url': 'http://192.168.10.131:8888/api/private/v1/login', 'headers': None, 'params': None, 'data': {'username': 'admin', 'password': '123456'}, 'json': None, 'files': None}
+INFO     root:send_request.py:13 发送HTPP请求，响应文本为：{"data":{"id":500,"rid":0,"username":"admin","mobile":"12345678","email":"adsfad@qq.com","token":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUwMCwicmlkIjowLCJpYXQiOjE3NzgzMjE1OTEsImV4cCI6MTc3ODQwNzk5MX0.Cf7_HuUGEMoboCCAKdw1bKTMef8snjGqPOmGDK_pGJE"},"meta":{"msg":"登录成功","status":200}}
+INFO     root:asserts.py:12 HTTP响应断言内容是：实际结果(登录成功) == 预期结果(登录成功)
+INFO     root:asserts.py:23 JDBC响应断言内容是：实际结果(admin) in 响应结果(admin)
+INFO     root:extractor.py:14 JSON提取，根据{"TOKEN":"$..token"}提取数据，此时全局变量为：{'TOKEN': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUwMCwicmlkIjowLCJpYXQiOjE3NzgzMjE1OTEsImV4cCI6MTc3ODQwNzk5MX0.Cf7_HuUGEMoboCCAKdw1bKTMef8snjGqPOmGDK_pGJE'}
+INFO     root:extractor.py:23 JSON提取，根据{"ADMIN_NAME":"select mg_name from sp_manager where mg_name = 'admin'"}提取数据，此时全局变量为：{'TOKEN': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUwMCwicmlkIjowLCJpYXQiOjE3NzgzMjE1OTEsImV4cCI6MTc3ODQwNzk5MX0.Cf7_HuUGEMoboCCAKdw1bKTMef8snjGqPOmGDK_pGJE', 'ADMIN_NAME': 'admin'}
